@@ -1,0 +1,15 @@
+services:
+  kali:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: niluxlaki/kali:latest
+    container_name: kali
+    hostname: kali
+    stdin_open: true
+    tty: true
+    volumes:
+      - kali-home:/home/kali
+
+volumes:
+  kali-home:
